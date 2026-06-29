@@ -58,23 +58,6 @@ def get_books():
     return books
 
 
-@app.get("/books/available")
-def get_available_books():
-    available_books_list = []
-    for item in books:
-        if item.get("is_available") == True:
-            available_books_list.append(item)
-    return available_books_list
-
-
-@app.get("/books/borrowed")
-def get_borrowred_books():
-    borrowed_books_list = []
-    for item in books:
-        if item.get("is_available") == False:
-            borrowed_books_list.append(item)
-    return borrowed_books_list
-
 @app.get("/books/statistics")
 def get_statistics_books():
     count_available = 0

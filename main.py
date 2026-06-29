@@ -45,19 +45,6 @@ books = [
     }
 ]
 
-
-@app.get("/health")
-def get_health():
-    return {
-        "message": "Library API is running"
-    }
-
-
-@app.get("/books")
-def get_books():
-    return books
-
-
 @app.get("/books/statistics")
 def get_statistics_books():
     count_available = 0
